@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo Sigma - Simulador de Combate ZR-37</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PROTOCOLO SIGMA</h1>
+            <h2>Simulador de Combate à Bactéria ZR-37</h2>
+        </header>
+
+        <div class="simulation-panel">
+            <div class="input-group">
+                <div class="input-container">
+                    <label for="concentration1">Concentração 1</label>
+                    <input type="number" id="concentration1" min="0" max="99" placeholder="0-99">
+                </div>
+                <div class="input-container">
+                    <label for="concentration2">Concentração 2</label>
+                    <input type="number" id="concentration2" min="0" max="99" placeholder="0-99">
+                </div>
+                <div class="input-container">
+                    <label for="concentration3">Concentração 3</label>
+                    <input type="number" id="concentration3" min="0" max="99" placeholder="0-99">
+                </div>
+            </div>
+            <button id="runSimulation" class="run-btn">Executar Simulação</button>
+        </div>
+
+        <div id="result" class="result-container hidden">
+            <div id="loading" class="loading-container">
+                <div class="loading-text">Analisando interação anticorpos vs ZR-37...</div>
+                
+                <!-- Contêiner da animação 2D -->
+                <div id="animationContainer" class="animation-container">
+                    <!-- Elementos de animação serão inseridos via JavaScript -->
+                </div>
+                
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            <div id="resultMessage" class="result-message"></div>
+            <div id="attemptsLeft" class="attempts-left"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
